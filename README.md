@@ -14,7 +14,8 @@ Each member owns one module and develops it on a dedicated branch.
 |---|---|---|---|
 | `core` | `main` | Team | Merged |
 | `auth` | `feature/auth-module` | Member 1 | Merged |
-| `catalog` | `feature/catalog-module` | Member 2 | In review |
+| `catalog` | `feature/catalog-module` | Member 2 | Merged |
+| `borrowing` | `feature/borrowing-module` | Member 3 | In review |
 
 ---
 
@@ -122,6 +123,12 @@ Conflicts encountered during this project and how they were settled.
 | # | Files | Cause | Resolution |
 |---|---|---|---|
 | 1 | `app.py`, `README.md` | PR #1 (auth) merged first. `feature/catalog-module` was cut from the same baseline, so both branches added a new entry at the **same position** in the `MODULES` list and the **same row** in the ownership table. | Kept **both** entries. The two modules are independent additions that only collided by line position, so nothing had to be discarded — `auth` and `catalog` were both listed, in registration order. |
+| 2 | `app.py`, `README.md` | Same cause, one branch later. By the time `feature/borrowing-module` merged `main`, **two** modules (`auth`, `catalog`) had landed, so the incoming side of the conflict was two lines against this branch's one. | Kept all three entries, appending `borrowing` after the two that were already on `main`. |
+
+**Lesson learned:** all three branches were cut from the same commit and all
+touched the same two lines, which is why conflicts 1 and 2 were nearly
+identical. Merging `main` into each branch *early and often* — rather than
+only at the end — would have kept each conflict to a single line.
 
 ---
 

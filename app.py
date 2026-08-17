@@ -8,6 +8,7 @@ MODULES = [
     "core",
     "auth",
     "catalog",
+    "borrowing",
 ]
 
 

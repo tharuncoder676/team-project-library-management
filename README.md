@@ -15,7 +15,18 @@ Each member owns one module and develops it on a dedicated branch.
 | `core` | `main` | Team | Merged |
 | `auth` | `feature/auth-module` | Member 1 | Merged |
 | `catalog` | `feature/catalog-module` | Member 2 | Merged |
-| `borrowing` | `feature/borrowing-module` | Member 3 | In review |
+| `borrowing` | `feature/borrowing-module` | Member 3 | Merged |
+
+All modules are merged. `main` loads all four:
+
+```
+Library Management System v0.1
+  loading module: core
+  loading module: auth
+  loading module: catalog
+  loading module: borrowing
+4 module(s) active
+```
 
 ---
 

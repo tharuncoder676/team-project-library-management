@@ -13,6 +13,7 @@ Each member owns one module and develops it on a dedicated branch.
 | Module | Branch | Owner | Status |
 |---|---|---|---|
 | `core` | `main` | Team | Merged |
+| `catalog` | `feature/catalog-module` | Member 2 | In review |
 
 ---
 

@@ -34,10 +34,13 @@ Library Management System v0.1
 
 ```
 team-project-library-management/
-├── app.py              # entry point; MODULES registry activates each module
+├── app.py                # entry point; MODULES registry activates each module
 ├── modules/
-│   └── core.py         # shared helpers
-└── README.md           # this file - the team workflow
+│   ├── core.py           # shared helpers                        (main)
+│   ├── auth.py           # login and role checks                 (Member 1)
+│   ├── catalog.py        # book records and search                (Member 2)
+│   └── borrowing.py      # issue and return of books              (Member 3)
+└── README.md             # this file - the team workflow
 ```
 
 A module is activated by adding its name to the `MODULES` list in `app.py`.

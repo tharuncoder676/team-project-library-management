@@ -6,6 +6,8 @@ activated by registering its name in the MODULES list below.
 
 MODULES = [
     "core",
+    "auth",
+    "catalog",
     "borrowing",
 ]
 

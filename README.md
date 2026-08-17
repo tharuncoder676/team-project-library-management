@@ -13,6 +13,7 @@ Each member owns one module and develops it on a dedicated branch.
 | Module | Branch | Owner | Status |
 |---|---|---|---|
 | `core` | `main` | Team | Merged |
+| `auth` | `feature/auth-module` | Member 1 | Merged |
 | `catalog` | `feature/catalog-module` | Member 2 | In review |
 
 ---
@@ -120,7 +121,7 @@ Conflicts encountered during this project and how they were settled.
 
 | # | Files | Cause | Resolution |
 |---|---|---|---|
-| — | — | *(none yet — baseline commit)* | — |
+| 1 | `app.py`, `README.md` | PR #1 (auth) merged first. `feature/catalog-module` was cut from the same baseline, so both branches added a new entry at the **same position** in the `MODULES` list and the **same row** in the ownership table. | Kept **both** entries. The two modules are independent additions that only collided by line position, so nothing had to be discarded — `auth` and `catalog` were both listed, in registration order. |
 
 ---
 

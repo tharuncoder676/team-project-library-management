@@ -13,6 +13,7 @@ Each member owns one module and develops it on a dedicated branch.
 | Module | Branch | Owner | Status |
 |---|---|---|---|
 | `core` | `main` | Team | Merged |
+| `borrowing` | `feature/borrowing-module` | Member 3 | In review |
 
 ---
 
